@@ -1,0 +1,31 @@
+W205, Fall 2016, Exercise 1
+Data Architecture and Assumptions
+Laura Williams
+
+The following assumptions have been made for running scripts for Exercise 1:
+
+They will be run on an AWS “UCB W205 Spring 2016” AMI,
+ideally on at least an m3.large instance (for better processing speed),
+with an attached EBS volume of at least 30GB,
+with security rules modified for access to Hadoop and Spark web interfaces (as specified in Lab 2),
+where permissions of the /data directory have been set to readable, writable and executable by all users,
+which has been formatted and set up for Hadoop, YARN, Hive, and PostgreSQL (via the setup script in Lab 2),
+and on which Spark and the Hive Metastore have been set up (via the setup script in Lab 3).
+
+It is assumed that the /data directory has been mounted,
+that Hadoop, Postgres and Hive Metastore have already been started,
+and that the user has been switched to w205.
+
+Location of script files:
+It is assumed that 
+[all scripts?  or just which ones?
+load_data_lake.sh]
+will be copied from my github repository to the /home/w205 folder on the EBS specified above.
+
+[when does spark get started]
+
+
+
+
+
+
