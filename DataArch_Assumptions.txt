@@ -22,6 +22,8 @@ It is assumed that
 load_data_lake.sh]
 will be copied from my github repository to the /home/w205 folder on the EBS specified above.
 
+File load_data_lake.sh will be run from /home/w205 with this command: bash ./load_data_lake.sh
+
 [when does spark get started]
 
 
