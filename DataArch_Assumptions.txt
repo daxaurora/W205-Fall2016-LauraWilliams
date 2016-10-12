@@ -16,13 +16,14 @@ It is assumed that the /data directory has been mounted,
 that Hadoop, Postgres and Hive Metastore have already been started,
 and that the user has been switched to w205.
 
-Location of script files:
-It is assumed that 
-[all scripts?  or just which ones?
-load_data_lake.sh]
-will be copied from my github repository to the /home/w205 folder on the EBS specified above.
+Script file locations:
+If the github repo W205-Fall2016-LauraWilliams is cloned directly to the /home/w205 folder and the Exercise1 branch is checked out, the following commands will run all scripts to complete the exercise.
+If the exercise files are moved elsewhere, adjust paths accordingly.
 
-File load_data_lake.sh will be run from /home/w205 with this command: bash ./load_data_lake.sh
+Run commands as follows from /home/w205
+
+bash ./W205-Fall2016-LauraWilliams/loading_and_modelling/load_data_lake.sh  [NOT TESTED]
+hive –f /home/w205/Ex1Repo/W205-Fall2016-LauraWilliams/loading_and_modelling/hive_base_ddl.sql  [NOT TESTED]
 
 [when does spark get started]
 

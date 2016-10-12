@@ -1,19 +1,19 @@
-# MIDS W205 - Fall 2016 - Exercise 1
-# Data Ingest:
-# Load external tables into hive from the hdfs CSV files
-# Laura Williams
+-- MIDS W205 - Fall 2016 - Exercise 1
+-- Data Ingest:
+-- Load external tables into hive from the hdfs CSV files
+-- Laura Williams
 
-# Assumptions about thos this file will be used:
-# Run this file in the same environment and at the same location
-# as the load_data_lake.sh using:
-# hive –f /path/to/hive_base_ddl.sql
+-- Assumptions about thos this file will be used:
+-- Run this file in the same environment and at the same location
+-- as the load_data_lake.sh using:
+-- hive –f /path/to/hive_base_ddl.sql
 
-# DROP TABLE is important to start each table creationg from scratch
+-- DROP TABLE is important to start each table creationg from scratch
 DROP TABLE hospitals_ingest;
 
-# Create tables from CSV files
+-- Create tables from CSV files
 
-# Hospital General Information
+-- Hospital General Information
 CREATE EXTERNAL TABLE hospitals_ingest
     (hospital_id int,
     hospital_name varchar(255),
@@ -53,7 +53,7 @@ STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/hospitals'
 ;
 
---code for testing at command line, remove for the script
-show tables;
+--code I used for testing this script at command line
+--show tables;
 
-SELECT * FROM hospitals_ingest LIMIT 3;
+--SELECT * FROM hospitals_ingest LIMIT 3;
