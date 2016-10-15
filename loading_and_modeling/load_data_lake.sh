@@ -1,6 +1,6 @@
 # MIDS W205 - Fall 2016 - Exercise 1
 # Data Ingest:
-# Load the raw data files into HDFS under “/user/w205/hospital_compare”
+# Load the raw data files into HDFS directory “/user/w205/hospital_compare”
 # Laura Williams
 
 # Assumptions about how this script will be used:
@@ -49,3 +49,5 @@ hdfs dfs -put effective_care.csv /user/w205/hospital_compare/effective_care
 hdfs dfs -put readmissions.csv /user/w205/hospital_compare/readmissions
 hdfs dfs -put measures.csv /user/w205/hospital_compare/measures
 hdfs dfs -put surveys.csv /user/w205/hospital_compare/surveys
+
+# END OF FILE

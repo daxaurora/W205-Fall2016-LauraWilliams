@@ -1,0 +1,35 @@
+MIDS W205 - Fall 2016 - Exercise 1
+Data Investigation
+Laura Williams
+
+Question 1: What hospitals are models of high-quality care?
+
+To answer, this question, I chose to make use of ratings in the Hospital General Information file that, according the the data dictionary, “summarize more than 60 measures reported on Hospital Compare into a single rating.”  Those 60 measures are divided into “seven measure groups: mortality, safety of care, readmission, patient experience, effectiveness of care, timeliness of care, and efficient use of medical imaging.”  Essentially, much of the data analysis of the bulk of data available in these files has already been wrapped into the overall start rating. A rating of 5 is the highest ranking.
+
+I chose to first filter out hospitals from the Hospital General Information file that have a 5-star rating. This narrowed my list to 102 hospitals.
+
+I next chose to filter out any hospitals that had a “Below the National average” rating in any of the 7 measure groups listed above.  I wanted to assure that, regardless of the overall 5-star rating, that no hospital in my final group fell below the national average in any of the subset of measure groups. This step narrowed my list down to 84 hospitals.
+
+I considered approaching this from the other direction, and instead including only hospitals that had an “Above the National average” in a few critical measure categories, such as mortality and safety of care.  However, in those measure categories, there were over 1000 hospitals for which rankings above or below the national average were not available.  To restrict the final results to only hospitals that did not have any missing data risked eliminating some otherwise high-performing hospitals from the list.
+
+Finally, I chose to rank this filtered list of hospitals by their scores in the Readmissions and Deaths file.  Whether or not one is likely to emerge from a hospital both alive, and unlikely to require repeat treatment is arguably one of the most important measures of a hospital’s quality. I summed up all the scores in this file for each hospital in this filtered list, and ranked them based on the lowest scores.  In this file, I interpreted that better scores are the lower scores, based on the documentation for this data states, which states:
+“The death (mortality) measures are estimates of deaths in the 30 days after either:
+Entering the hospital for a specific condition; or
+Having a coronary artery bypass graft (CABG) surgery.”
+
+The final table of the 10 best hospitals, with their rank based on mortality scores, is as follows:
+
+HOAG ORTHOPEDIC INSTITUTE	IRVINE		CA	13.4
+HOSPITAL FOR SPECIAL SURGERY	NEW YORK	NY	14.1
+NOVANT HEALTH MEDICAL PARK 
+HOSPITAL			WINSTON-SALEM	NC	14.6
+ORTHOINDY HOSPITAL		INDIANAPOLIS	IN	15.4
+ARKANSAS SURGICAL HOSPITAL	NO LITTLE ROCK	AR	15.7
+MOUNT CARMEL NEW ALBANY 
+SURGICAL HOSPITAL		NEW ALBANY	OH	15.7
+TEXAS ORTHOPEDIC HOSPITAL	HOUSTON		TX	16.4
+KANSAS SURGERY & RECOVERY 
+CENTER				WICHITA		KS	16.5
+NEBRASKA ORTHOPAEDIC HOSPITAL	OMAHA		NE	16.6
+OKLAHOMA SURGICAL HOSPITAL, 
+LLC				TULSA	OK	16.7

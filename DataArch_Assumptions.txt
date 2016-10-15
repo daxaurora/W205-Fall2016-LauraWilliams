@@ -12,20 +12,36 @@ where permissions of the /data directory have been set to readable, writable and
 which has been formatted and set up for Hadoop, YARN, Hive, and PostgreSQL (via the setup script in Lab 2),
 and on which Spark and the Hive Metastore have been set up (via the setup script in Lab 3).
 
-It is assumed that the /data directory has been mounted,
-that Hadoop, Postgres and Hive Metastore have already been started,
-and that the user has been switched to w205.
+How I ran my scripts:
+I mounted the /data directory on my attached EBS.
+I started Hadoop and Postgres as the root user.
+I switched to user w205.
+I cloned my github repo directly to /home/w205 on the EBS.
 
-Script file locations:
-If the github repo W205-Fall2016-LauraWilliams is cloned directly to the /home/w205 folder and the Exercise1 branch is checked out, the following commands will run all scripts to complete the exercise.
-If the exercise files are moved elsewhere, adjust paths accordingly.
+I ran the scripts in the loading_and_modeling folder with the following bash commands (update path as needed):
+bash ./home/w205/W205-Fall2016-LauraWilliams/loading_and_modeling/load_data_lake.sh 
+hive –f /home/w205/W205-Fall2016-LauraWilliams/loading_and_modeling/hive_base_ddl.sql  
 
-Run commands as follows from /home/w205
+Note that I named the loading_and_modeling folder with only one “l” in modeling.
 
-bash ./W205-Fall2016-LauraWilliams/loading_and_modelling/load_data_lake.sh  [NOT TESTED]
-hive –f /home/w205/Ex1Repo/W205-Fall2016-LauraWilliams/loading_and_modelling/hive_base_ddl.sql  [NOT TESTED]
+I ran all my sql files in hive.
 
-[when does spark get started]
+
+Other general notes about how I organized this project:
+
+I put the CSV files that I wanted to use on my old photography website so this script could be repeatable on any AMI with the above assumptions. I don't know how to get a csv file via an API call; presumably that would have been the more common way to get this file directly from the source.
+
+In my ER diagram, I made separate tables for Effective Care Scores and Mortality scores because it appears that the number scores should be interpreted differently. The scores in the Readmissions and Deaths file (from which I created my Mortality Scores table) are better if they are lower because lower numbers indicate in general fewer deaths and fewer readmissions. The scores in the Timely and Effective Care table (from which I created my Effective Care Scores table) are better if they are higher, because higher scores indicate better care for each measure.
+
+I set up those two tables (Mortality Scores and Effective Care Scores) to have a compound primary key comprised of two foreign keys (Hospital ID and Measure ID), but from what I can gather, Spark SQL does not support compound primary keys, nor does it support an auto-increment function because Spark RDDs are read-only. I wasn’t sure how to create a unique primary key in Spark SQL in this situation.
+
+I discovered this page as used the cast AS code to change column types when transforming the data to match the ER diagram:
+http://stackoverflow.com/questions/12759407/specify-datatype-in-create-table-as-statement
+
+Overall I focussed on getting the pipeline correct rather than creating complex SQL queries. Sorting out all the technology and learning how to create some fairly basic SQL queries was more than sufficiently challenging for me. 
+
+Assumptions made regarding the specific questions being answered in the exercise are addressed in the documents included in the “investigations” folder.
+
 
 
 
