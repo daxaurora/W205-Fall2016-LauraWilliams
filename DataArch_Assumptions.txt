@@ -17,10 +17,9 @@ I mounted the /data directory on my attached EBS.
 I started Hadoop and Postgres as the root user.
 I switched to user w205.
 I cloned my github repo directly to /home/w205 on the EBS.
+I checked out the Exercise1 branch.
 
-I ran the scripts in the loading_and_modeling folder with the following bash commands (update path as needed):
-bash ./home/w205/W205-Fall2016-LauraWilliams/loading_and_modeling/load_data_lake.sh 
-hive –f /home/w205/W205-Fall2016-LauraWilliams/loading_and_modeling/hive_base_ddl.sql  
+I ran both the load_data_lake.sh and the hive_base_ddl.sql scripts directly from their location in the repo.
 
 Note that I named the loading_and_modeling folder with only one “l” in modeling.
 
