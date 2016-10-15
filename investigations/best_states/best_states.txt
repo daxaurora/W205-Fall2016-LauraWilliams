@@ -4,9 +4,9 @@ Laura Williams
 
 Question 2: What states are models of high-quality care?
 
-To answer this question, I used the data in the Hospital General Information data, again making use of the overall hospital rating.  I averaged the ratings for all hospitals in each state, and then ranked states based on that average. The top 10 states that are models of high-quality care are listed below, with their average hospital rating.
+To answer this question, I used the Hospital General Information data, again making use of the overall hospital rating.  I averaged the ratings for all hospitals in each state, and then ranked states based on that average. The top 10 states that are models of high-quality care are listed below, with their average hospital rating.
 
-I had one odd issue with this data set:  Oklahoma (OK) regularly appeared at the top of the list with no numerical rating.  I explored the data and discovered that there are 3 rows in this data set with no apparent star rating. However, those rows are not NULL, NA, nor are they blank space. I attempted to remove these 3 rows in my code, without any success.  I solved the problem by exploring all other star ratings for Oklahoma, determining that the other ratings would not otherwise place Oklahoma in the top 10 list of best performing states, and then I wrote the code for this table to return 11 results, and then I ignored Oklahoma.  Undoubtedly there is a better way to deal with this, but that’s how I dealt with it in this situation.
+I had one odd issue with this data set:  Oklahoma (OK) regularly appeared at the top of the list with no numerical rating.  I explored the data and discovered that there are 3 rows in this data set for hospitals in the state of Oklahoma with no apparent star rating. However, those rows are not NULL, NA, nor are they blank space. I attempted to remove these 3 rows in my code, without any success.  I solved the problem by exploring all other star ratings for Oklahoma, determining that the other ratings would not otherwise place Oklahoma in the top 10 list of best performing states, and then I wrote the code for this table to return 11 results, and then I ignored Oklahoma.  Undoubtedly there is a better way to deal with this, but that’s how I dealt with it in this situation.
 
 SD	4.12
 ID	3.65

@@ -20,7 +20,7 @@ I made a new directory to hold my github repo.
 I cloned my github repo into that directory.
 I changed directories into the repo and checked out the Exercise1 branch.
 
-I ran both the load_data_lake.sh and the hive_base_ddl.sql scripts directly from their location in the repo.
+I switched back to the /home/w205 directory and ran both the load_data_lake.sh and the hive_base_ddl.sql scripts directly from there.
 
 Note that I named the loading_and_modeling folder with only one “l” in modeling.
 
@@ -29,13 +29,13 @@ I ran all my sql files in hive.
 
 Other general notes about how I organized this project:
 
-I put the CSV files that I wanted to use on my old photography website so this script could be repeatable on any AMI with the above assumptions. I don't know how to get a csv file via an API call; presumably that would have been the more common way to get this file directly from the source.
+I put the Medicare CSV files that I wanted to use on my old photography website so that the load_data_lake.sh script could be repeatable on any AMI with the above assumptions. I don't know how to get a csv file via an API call; presumably that would have been the more common way to get this file directly from the source.
 
-In my ER diagram, I made separate tables for Effective Care Scores and Mortality scores because it appears that the number scores should be interpreted differently. The scores in the Readmissions and Deaths file (from which I created my Mortality Scores table) are better if they are lower because lower numbers indicate in general fewer deaths and fewer readmissions. The scores in the Timely and Effective Care table (from which I created my Effective Care Scores table) are better if they are higher, because higher scores indicate better care for each measure.
+In my ER diagram, I made separate tables for Effective Care Scores and Mortality scores because it appears that the number scores should be interpreted differently for those two tables. The scores in the Readmissions and Deaths file (from which I created my Mortality Scores table) are better if they are lower because lower numbers indicate in general fewer deaths and fewer readmissions. The scores in the Timely and Effective Care table (from which I created my Effective Care Scores table) are better if they are higher, because higher scores indicate better care for each measure.
 
-I set up those two tables (Mortality Scores and Effective Care Scores) to have a compound primary key comprised of two foreign keys (Hospital ID and Measure ID), but from what I can gather, Spark SQL does not support compound primary keys, nor does it support an auto-increment function because Spark RDDs are read-only. I wasn’t sure how to create a unique primary key in Spark SQL in this situation.
+I set up those two tables (Mortality Scores and Effective Care Scores) to have a compound primary key comprised of two foreign keys (Hospital ID and Measure ID). However, I gather Spark SQL does not support compound primary keys, nor does it support an auto-increment function because Spark RDDs are read-only. I wasn’t sure how to create a unique primary key in Spark SQL in this situation.
 
-I discovered this page as used the cast AS code to change column types when transforming the data to match the ER diagram:
+I discovered this page and used the cast AS code to change column types when transforming the data to match the ER diagram:
 http://stackoverflow.com/questions/12759407/specify-datatype-in-create-table-as-statement
 
 Overall I focussed on getting the pipeline correct rather than creating complex SQL queries. Sorting out all the technology and learning how to create some fairly basic SQL queries was more than sufficiently challenging for me. 

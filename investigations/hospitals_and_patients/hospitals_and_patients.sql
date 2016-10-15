@@ -15,7 +15,8 @@ SELECT
 hospital_name,
 city,
 state,
-score_overall_base + score_overall_consistency AS TotalScore
+base_score + consistency_score AS TotalScore
 FROM hospitals
 ORDER BY TotalScore DESC
 LIMIT 25;
+-- END OF FILE

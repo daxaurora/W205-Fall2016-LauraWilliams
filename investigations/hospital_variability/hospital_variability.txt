@@ -10,19 +10,22 @@ From the Mortality Scores table and the Effective Care table, I measured the ran
 
 The top 10 procedures with the greatest variability among hospitals are as follows:
 
-Median Time from ED Arrival to ED Departure for Admitted ED Patients		1151.0
-Admit Decision Time to ED Departure Time for Admitted Patients		601.0
-Median Time to Transfer to Another Facility for Acute Coronary Intervention- Reporting Rate									404.0
-Median Time from ED Arrival to ED Departure for Discharged ED Patients	381.0
-Median Time from ED Arrival to Provider Contact for ED patients		152.0
-Median Time to Pain Management for Long Bone Fracture			128.0
-Antithrombotic Therapy By End of Hospital Day 2				100.0
-Venous Thromboembolism Prophylaxis						100.0
-Venous Thromboembolism (VTE) Prophylaxis					100.0
-Thrombolytic Therapy								100.0
-
-
-
+Left without being seen					506609.0
+Median Time from ED Arrival to Provider Contact 
+for ED patients						104781.0
+Median Time from ED Arrival to ED Departure for 
+Discharged ED Patients					97298.0
+Admit Decision Time to ED Departure Time for 
+Admitted Patients					6164.0
+Median Time from ED Arrival to ED Departure for 
+Admitted ED Patients					6164.0
+Venous Thromboembolism Prophylaxis			6074.0
+Influenza Immunization					4984.0
+Surgery Patients Who Received Appropriate Venous 
+Thromboembolism Prophylaxis Within 24 Hours Prior 
+to Surgery to 24 Hours After Surgery			1904.0
+Venous Thromboembolism (VTE) Prophylaxis		1881.0
+Assessed for Rehabilitation				1788.0
 
 
 

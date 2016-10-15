@@ -6,7 +6,7 @@ Question 4: Are average scores for hospital quality or procedural variability co
 
 I interpreted this question as an either/or question and chose to evaluate the hospital quality investigation (as in Question 1) against patient survey responses for hospital quality.
 
-I chose to use the Patient Experience of Care Domain Scores as the best aggregate measure of patient experience, described by the data documentation as  “the HCAHPS Base Score (maximum of 80 points) and the HCAHPS Consistency Points score (maximum of 20 points).” These two scores are included in the Hospitals table in the ER diagram.
+I chose to use the Patient Experience of Care Domain Scores as the best aggregate measure of patient experience, described by the data documentation as “the HCAHPS Base Score (maximum of 80 points) and the HCAHPS Consistency Points score (maximum of 20 points).” These two scores are included in the Hospitals table in the ER diagram.
 
 I added these two scores together and discovered that more than 10 hospitals have earned this highest measure of patient evaluation scores.  Instead of seeking out further refinement, I chose to compare the top 10 hospitals that demonstrated quality care (as determined in Question 1), and explore how many of those hospitals also received the highest score of 100 from patient surveys.
 
@@ -14,7 +14,6 @@ It turns out that only one of the top 10 hospitals ranked for high-quality care 
 ORTHOINDY HOSPITAL in INDIANAPOLIS, IN	
 
 This indicates that either the method used for ranking quality care is inadequate, or perhaps that if a larger group were chosen at the top of both quality care and patient ratings (i.e., 50+ of each), there might be a closer correlation, or finally, it’s possible that patient perception of care is significantly different than measurable outcomes.
-
 
 Top 10 hospitals of high-quality care (as explored in Question 1):
 HOAG ORTHOPEDIC INSTITUTE	IRVINE		CA	13.4
