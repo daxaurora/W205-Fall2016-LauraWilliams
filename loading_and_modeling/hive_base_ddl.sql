@@ -9,7 +9,7 @@
 DROP TABLE hospitals_ingest;
 CREATE EXTERNAL TABLE hospitals_ingest (
     hospital_id string,
-    hospital_name string
+    hospital_name string,
     address string,
     city string,
     state string,

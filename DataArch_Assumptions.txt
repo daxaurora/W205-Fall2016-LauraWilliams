@@ -16,8 +16,9 @@ How I ran my scripts:
 I mounted the /data directory on my attached EBS.
 I started Hadoop and Postgres as the root user.
 I switched to user w205.
-I cloned my github repo directly to /home/w205 on the EBS.
-I checked out the Exercise1 branch.
+I made a new directory to hold my github repo.
+I cloned my github repo into that directory.
+I changed directories into the repo and checked out the Exercise1 branch.
 
 I ran both the load_data_lake.sh and the hive_base_ddl.sql scripts directly from their location in the repo.
 
