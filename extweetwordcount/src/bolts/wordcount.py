@@ -20,15 +20,18 @@ class WordCounter(Bolt):
         self.counts[word] += 1
         self.emit([word, self.counts[word]])
 
-	# Add word counts to database
-	if self.counts[word] == 1:
-            cur.execute("INSERT INTO tweetwordcount (word,count) \
-                VALUES (%s, 1)", (word,));
+	# Create variable to hold each word and count
+        (this_word, this_count) = word, self.counts[word]
+	
+        # Increment database with words and counts
+        if this_count == 1:
+            cur.execute("INSERT INTO tweetwordcount (word, count) \
+                         VALUES (%s, %s)", (this_word, this_count))
             conn.commit()
-	else:
-            cur.execute("UPDATE tweetwordcount SET count=%s WHERE word=%s", \
-                (self.counts[word], word))
-            conn.commit()
+        else:
+             cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word=%s", \
+                         (this_count, this_word))
+             conn.commit()
 
         # Log the count - just to see the topology running
         self.log('%s: %d' % (word, self.counts[word]))
