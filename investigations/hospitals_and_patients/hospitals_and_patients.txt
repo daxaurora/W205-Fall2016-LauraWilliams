@@ -1,0 +1,65 @@
+MIDS W205 - Fall 2016 - Exercise 1
+Data Investigation
+Laura Williams
+
+Question 4: Are average scores for hospital quality or procedural variability correlated with patient survey responses?
+
+I interpreted this question as an either/or question and chose to evaluate the hospital quality investigation (as in Question 1) against patient survey responses for hospital quality.
+
+I chose to use the Patient Experience of Care Domain Scores as the best aggregate measure of patient experience, described by the data documentation as “the HCAHPS Base Score (maximum of 80 points) and the HCAHPS Consistency Points score (maximum of 20 points).” These two scores are included in the Hospitals table in the ER diagram.
+
+I added these two scores together and discovered that more than 10 hospitals have earned this highest measure of patient evaluation scores.  Instead of seeking out further refinement, I chose to compare the top 10 hospitals that demonstrated quality care (as determined in Question 1), and explore how many of those hospitals also received the highest score of 100 from patient surveys.
+
+It turns out that only one of the top 10 hospitals ranked for high-quality care received the highest score in patient surveys:
+ORTHOINDY HOSPITAL in INDIANAPOLIS, IN	
+
+This indicates that either the method used for ranking quality care is inadequate, or perhaps that if a larger group were chosen at the top of both quality care and patient ratings (i.e., 50+ of each), there might be a closer correlation, or finally, it’s possible that patient perception of care is significantly different than measurable outcomes.
+
+Top 10 hospitals of high-quality care (as explored in Question 1):
+HOAG ORTHOPEDIC INSTITUTE	IRVINE		CA	13.4
+HOSPITAL FOR SPECIAL SURGERY	NEW YORK	NY	14.1
+NOVANT HEALTH MEDICAL PARK 
+HOSPITAL			WINSTON-SALEM	NC	14.6
+ORTHOINDY HOSPITAL		INDIANAPOLIS	IN	15.4
+ARKANSAS SURGICAL HOSPITAL	NO LITTLE ROCK	AR	15.7
+MOUNT CARMEL NEW ALBANY 
+SURGICAL HOSPITAL		NEW ALBANY	OH	15.7
+TEXAS ORTHOPEDIC HOSPITAL	HOUSTON		TX	16.4
+KANSAS SURGERY & RECOVERY 
+CENTER				WICHITA		KS	16.5
+NEBRASKA ORTHOPAEDIC HOSPITAL	OMAHA		NE	16.6
+OKLAHOMA SURGICAL HOSPITAL, 
+LLC				TULSA	OK	16.7
+
+All hospitals that received the highest possible score of 100 based on patient surveys:
+ORTHOINDY HOSPITAL	       INDIANAPOLIS	IN	100.0
+FRANCISCAN ST FRANCIS HEALTH - CARMEL	CARMEL	IN	100.0
+QUAIL CREEK SURGICAL HOSPITAL	AMARILLO	TX	100.0
+ADVANCED SURGICAL HOSPITAL	WASHINGTON	PA	100.0
+OAKLEAF SURGICAL HOSPITAL	ALTOONA	  	WI	100.0
+PATIENTS' HOSPITAL OF REDDING	REDDING		CA	100.0
+GHS PATEWOOD MEMORIAL HOSPITAL	GREENVILLE	SC	100.0
+SURGICAL SPECIALTY CENTER OF 
+BATON ROUGE			BATON ROUGE	LA	100.0
+T J HEALTH COLUMBIA		COLUMBIA	KY	100.0
+BAYLOR MEDICAL CENTER AT 
+UPTOWN				DALLAS	TX	100.0
+SURGICAL HOSPITAL AT S
+OUTHWOODS			YOUNGSTOWN	OH	100.0
+DAKOTA PLAINS SURGICAL 
+CENTER LLP			ABERDEEN	SD	100.0
+MIDWEST SURGICAL HOSPITAL LLC	OMAHA		NE	100.0
+TEXAS SPINE AND JOINT HOSPITAL	TYLER		TX	100.0
+OKLAHOMA HEART HOSPITAL	OKLAHOMA CITY	OK	100.0
+PREMIER SURGICAL INSTITUTE	GALENA		KS	100.0
+SURGICAL INSTITUTE OF READING	WYOMISSING	PA	100.0
+NORTHWEST SPECIALTY HOSPITAL	POST FALLS	ID	100.0
+HEART HOSPITAL OF LAFAYETTE	LAFAYETTE	LA	100.0
+BLACK HILLS SURGICAL 
+HOSPITAL LLP			RAPID CITY	SD	100.0
+MANHATTAN SURGICAL 
+HOSPITAL LLC			MANHATTAN	KS	100.0
+TOPS SURGICAL SPECIALTY 
+HOSPITAL			HOUSTON	TX	100.0
+ORTHOPAEDIC HOSPITAL OF 
+WISCONSIN			GLENDALE	WI	100.0

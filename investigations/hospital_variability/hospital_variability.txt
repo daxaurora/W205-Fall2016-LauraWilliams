@@ -1,0 +1,31 @@
+MIDS W205 - Fall 2016 - Exercise 1
+Data Investigation
+Laura Williams
+
+Question 3: Which procedures have the greatest variability between hospitals?
+
+I interpreted this question to mean: for each procedure, measure the variability of scores among all hospitals. I chose to measure variability as the greatest range of scores for each procedure.
+
+From the Mortality Scores table and the Effective Care table, I measured the range of scores for each procedure (maximum score minus minimum score for each procedure) and then ranked the procedures based on the range of scores.
+
+The top 10 procedures with the greatest variability among hospitals are as follows:
+
+Left without being seen					506609.0
+Median Time from ED Arrival to Provider Contact 
+for ED patients						104781.0
+Median Time from ED Arrival to ED Departure for 
+Discharged ED Patients					97298.0
+Admit Decision Time to ED Departure Time for 
+Admitted Patients					6164.0
+Median Time from ED Arrival to ED Departure for 
+Admitted ED Patients					6164.0
+Venous Thromboembolism Prophylaxis			6074.0
+Influenza Immunization					4984.0
+Surgery Patients Who Received Appropriate Venous 
+Thromboembolism Prophylaxis Within 24 Hours Prior 
+to Surgery to 24 Hours After Surgery			1904.0
+Venous Thromboembolism (VTE) Prophylaxis		1881.0
+Assessed for Rehabilitation				1788.0
+
+
+
