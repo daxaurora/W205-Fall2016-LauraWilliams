@@ -1,4 +1,7 @@
-# Create the tcount database
+# MIDS W205 Exercise 2 - Laura Williams
+
+# This file creates the tcount postgres database and the tweetwordcout table
+# to record the word counts from the Twitter stream
 
 # Imports
 import psycopg2
@@ -24,7 +27,7 @@ conn.close()
 conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
 
 
-#Create a cursor.
+#Create a cursor
 cur = conn.cursor()
 
 # Create and save the table
