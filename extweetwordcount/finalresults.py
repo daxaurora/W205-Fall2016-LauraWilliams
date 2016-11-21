@@ -37,3 +37,4 @@ else:
     print final_output
 
 
+conn.close()
